@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platform Pembelajaran Interaktif: TikTok Kaedah Pemasaran Bisnes (Tapi Tak Menari)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP CORPORATE NAVIGATION BAR
+       ======================================================================== -->
+  <header class="top-navbar">
+    <div class="navbar-inner">
+      <div class="brand-cluster">
+        <div class="brand-orb">2025</div>
+        <div class="brand-titles">
+          <h1>TIKTOK MARKETING HUB</h1>
+          <p>Modul Interaktif: "TikTok Tapi Tak Menari" (PMTG)</p>
+        </div>
+      </div>
+
+      <nav class="nav-links" aria-label="Menu Utama">
+        <button class="nav-btn active" data-view="nota" onclick="switchView('nota')">
+          <span class="nav-num">01</span> Nota 8 Bab
+        </button>
+        <button class="nav-btn" data-view="jalankerja" onclick="switchView('jalankerja')">
+          <span class="nav-num">02</span> Jalan Kerja Step-by-Step
+        </button>
+        <button class="nav-btn" data-view="promosi" onclick="switchView('promosi')">
+          <span class="nav-num">03</span> Penjana Promosi 7 Hari
+        </button>
+        <button class="nav-btn" data-view="makmal" onclick="switchView('makmal')">
+          <span class="nav-num">04</span> Simulator & Kuiz
+        </button>
+        <button class="nav-btn" data-view="chatbot" onclick="switchView('chatbot')">
+          <span class="nav-num">05</span> Chatbot AI
+        </button>
+      </nav>
+
+      <div class="status-cluster">
+        <div class="xp-pill" title="Mata Pengalaman Pembelajaran Pelajar">
+          <span class="xp-badge-circle" id="xpLevel">LV 1</span>
+          <span id="xpValue">120 XP</span>
+        </div>
+        <button class="instructor-toggle-btn" id="instructorToggleBtn" onclick="toggleInstructorMode()">
+          👨‍🏫 Mod Tenaga Pengajar
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO COVER SLIDE ("2025 COMPANY" TEMPLATE DESIGN CONCEPT)
+       ======================================================================== -->
+  <section class="hero-slide">
+    <div class="hero-card">
+      <!-- 3D Overlapping White & Corporate Blue Circular Orbs -->
+      <div class="orb-cluster-wrap">
+        <div class="orb-white-lg"></div>
+        <div class="orb-white-md"></div>
+        <div class="orb-white-sm"></div>
+        <div class="orb-blue-md"></div>
+        <div class="orb-blue-sm"></div>
+        <div class="orb-main">
+          <div class="orb-year">2025</div>
+          <div class="orb-sub">EBOOK MODUL</div>
+          <div class="orb-tag">TAPI TAK MENARI</div>
+        </div>
+      </div>
+
+      <!-- Hero Corporate Typography & Quick Actions -->
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span>📘 PLATFORM PEMBELAJARAN DIGITAL INTERAKTIF</span>
+        </div>
+        <h2 class="hero-title">
+          TIKTOK <span>KAEDAH PEMASARAN BISNES</span>
+        </h2>
+        <div class="hero-divider"></div>
+        <p class="hero-desc">
+          Platform pengajaran dan pembelajaran (PdP) lengkap merangkumi <strong>Nota 8 Bab Penuh</strong>, <strong>6 Jalan Kerja Step-by-Step</strong>, <strong>Penjana Ayat Promosi Trending 7 Hari Seminggu (Formula E.M.A.S)</strong>, <strong>Simulator Algoritma FYP</strong> serta <strong>Chatbot AI Pintar</strong>.
+        </p>
+
+        <div class="hero-authors">
+          <div class="author-chip">
+            <small>DIBANGUNKAN BERDASARKAN EBOOK OLEH:</small>
+            <strong>Mohd Azrulnizam Bin Mohd Kamarudin (PMTG)</strong>
+          </div>
+          <div class="author-chip">
+            <small>PENULIS BERSAMA:</small>
+            <strong>Razlan Bin Burhaumudin</strong>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary-blue" onclick="switchView('promosi')">
+            🔥 Jana Ayat Promosi 7 Hari
+          </button>
+          <button class="btn-outline-blue" onclick="switchView('jalankerja')">
+            🛠️ Mula Jalan Kerja Step-by-Step
+          </button>
+          <button class="btn-outline-blue" onclick="switchView('chatbot')">
+            🤖 Tanya Cikgu TikTok Bot
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CATALOG HEXAGON BAR (SLIDE 02 TEMPLATE STYLE)
+       ======================================================================== -->
+  <section class="catalog-strip">
+    <div class="catalog-card">
+      <div class="catalog-badge-orb">CATALOG 8 BAB</div>
+      <div class="catalog-nodes">
+        <div class="hex-node" onclick="jumpToChapter('bab1')">
+          <div class="hex-shape">01</div>
+          <div class="hex-label">Pengenalan<small>Sejarah & Fungsi</small></div>
+        </div>
+        <div class="hex-node" onclick="jumpToChapter('bab2')">
+          <div class="hex-shape">02</div>
+          <div class="hex-label">Pemasaran<small>Edu-Market & Bukti</small></div>
+        </div>
+        <div class="hex-node" onclick="jumpToChapter('bab3')">
+          <div class="hex-shape">03</div>
+          <div class="hex-label">Content<small>Formula E.M.A.S</small></div>
+        </div>
+        <div class="hex-node" onclick="jumpToChapter('bab4')">
+          <div class="hex-shape">04</div>
+          <div class="hex-label">Pendapatan<small>Shop & Affiliate</small></div>
+        </div>
+        <div class="hex-node" onclick="jumpToChapter('bab5')">
+          <div class="hex-shape">05</div>
+          <div class="hex-label">Cara Mula<small>Setup & Jadual</small></div>
+        </div>
+        <div class="hex-node" onclick="jumpToChapter('bab6')">
+          <div class="hex-shape">06</div>
+          <div class="hex-label">Naikkan View<small>Algoritma FYP</small></div>
+        </div>
+        <div class="hex-node" onclick="jumpToChapter('bab7')">
+          <div class="hex-shape">07</div>
+          <div class="hex-label">Close Sale<small>Live & Larangan</small></div>
+        </div>
+        <div class="hex-node" onclick="jumpToChapter('bab8')">
+          <div class="hex-shape">08</div>
+          <div class="hex-label">Strategi 90 Hari<small>Ads & Automasi</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INSTRUCTOR MODE BANNER (VISIBLE WHEN INSTRUCTOR MODE IS ON)
+       ======================================================================== -->
+  <section class="instructor-banner">
+    <div class="instructor-banner-inner">
+      <div>
+        <strong>🎓 MOD TENAGA PENGAJAR AKTIF:</strong>
+        <span>Kotak panduan pengajaran kuliah, cadangan aktiviti dalam kelas (roleplay/perbincangan) dan jawapan rujukan kini dipaparkan pada setiap modul.</span>
+      </div>
+      <button class="btn-outline-blue" style="padding:0.4rem 0.9rem;font-size:0.78rem;" onclick="window.print()">
+        🖨️ Cetak Bahan Kuliah / Jadual
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MAIN CONTENT VIEWS
+       ======================================================================== -->
+  <main class="main-container">
+
+    <!-- ======================================================================
+         VIEW 01: NOTA LENGKAP EBOOK (8 BAB + PRAKATA)
+         ====================================================================== -->
+    <section id="view-nota" class="view-section active">
+      <div class="part-banner">
+        <div class="part-banner-left">
+          <span class="part-tag">CREATIVE BUSINESS TEMPLATE • MODULE 01</span>
+          <h2>Nota Lengkap & Penerangan Jelas (Bab 1 – Bab 8)</h2>
+          <p>Rujukan komprehensif daripada eBook "TikTok: Kaedah Pemasaran Bisnes (Tapi Tak Menari)" lengkap dengan jadual perbandingan, kajian kes Malaysia, dan Formula E.M.A.S.</p>
+        </div>
+        <div class="part-banner-num">01</div>
+      </div>
+
+      <div class="notes-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="chapters-sidebar">
+          <div style="font-size:0.8rem;font-weight:900;color:var(--blue-900);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.6rem;">
+            📚 Senarai Modul & Bab
+          </div>
+          <input
+            type="text"
+            id="chapterSearchInput"
+            class="sidebar-search"
+            placeholder="🔍 Cari topik (cth: EMAS, FYP, Affiliate)..."
+          />
+          <div id="chapterNavList" class="chapter-nav-list"></div>
+        </aside>
+
+        <!-- Main Chapter Content Reader -->
+        <article id="chapterReaderContainer" class="chapter-reader"></article>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 02: JALAN KERJA STEP-BY-STEP INTERAKTIF
+         ====================================================================== -->
+    <section id="view-jalankerja" class="view-section">
+      <div class="part-banner">
+        <div class="part-banner-left">
+          <span class="part-tag">STEP-BY-STEP WORKFLOWS • MODULE 02</span>
+          <h2>Jalan Kerja Step-by-Step & Praktikal Pelajar</h2>
+          <p>6 aliran kerja berpandu daripada pendaftaran akaun TikTok Business, TikTok Shop/Affiliate, rakaman Formula E.M.A.S, optimasi FYP, teknik Close Sale sehingga Pelan 90 Hari.</p>
+        </div>
+        <div class="part-banner-num">02</div>
+      </div>
+
+      <div class="instructor-note-box">
+        <strong>👨‍🏫 Aktiviti Amali Kelas (Jalan Kerja Step-by-Step):</strong>
+        Bahagikan pelajar kepada kumpulan kecil. Minta setiap kumpulan melengkapkan 6 aliran kerja di bawah dan menandakan kotak semak (checkbox) sambil menguji Simulator Profil Bisnes di sebelah kanan.
+      </div>
+
+      <!-- 6 Workflow Selector Cards -->
+      <div id="workflowSelectorBar" class="workflow-selector-bar"></div>
+
+      <!-- Timeline Steps + Live Profile Simulator Workbench -->
+      <div class="workflow-stage">
+        <div id="workflowTimelineContainer" class="steps-timeline"></div>
+
+        <!-- Right Interactive Workbench: Live TikTok Business Bio Simulator -->
+        <aside class="workbench-card">
+          <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem;">
+            <div class="subtopic-orb">SIM</div>
+            <div>
+              <h3 style="font-size:1.02rem;font-weight:900;color:var(--blue-900);">Simulator Profil TikTok Business</h3>
+              <p style="font-size:0.76rem;color:var(--text-secondary);">Latihan Praktikal Bab 5.1 & Bab 7.5</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="simHandleInput">Username Bisnes (Contoh Bab 5.1)</label>
+            <input type="text" id="simHandleInput" class="form-input" value="@beriani.azrul" oninput="updateBioSimulator()" />
+          </div>
+
+          <div class="form-group">
+            <label for="simBioLine1">Baris 1 Bio (Nilai / Apa Yang Dijual)</label>
+            <input type="text" id="simBioLine1" class="form-input" value="Jual beriani homemade dari rumah 👨‍🍳" oninput="updateBioSimulator()" />
+          </div>
+
+          <div class="form-group">
+            <label for="simBioLine2">Baris 2 Bio (Bukti Sosial & CTA)</label>
+            <input type="text" id="simBioLine2" class="form-input" value="Order terus via link 👇👇" oninput="updateBioSimulator()" />
+          </div>
+
+          <div class="form-group">
+            <label for="simBioLink">Pautan Taplink / Linktree / TikTok Shop</label>
+            <input type="text" id="simBioLink" class="form-input" value="taplink.cc/andaberiani" oninput="updateBioSimulator()" />
+          </div>
+
+          <div style="background:var(--surface-off);border:1.5px solid var(--border-light);border-radius:var(--radius-md);padding:1.25rem;margin-top:1rem;">
+            <div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;color:var(--text-muted);text-align:center;margin-bottom:0.65rem;">
+              PRATONTON PROFIL TIKTOK PELAJAR
+            </div>
+            <div id="bioSimulatorPreview"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 03: PENJANA AYAT TRENDING PROMOSI 7 HARI SEMINGGU
+         ====================================================================== -->
+    <section id="view-promosi" class="view-section">
+      <div class="part-banner">
+        <div class="part-banner-left">
+          <span class="part-tag">7-DAY VIRAL PROMO GENERATOR • MODULE 03</span>
+          <h2>Penjana Ayat Trending Promosi 7 Hari Seminggu</h2>
+          <p>Jana pelan kandungan dan skrip promosi lengkap untuk setiap hari (Isnin hingga Ahad) berasaskan Formula E.M.A.S (Bab 3.2), Jadual Mingguan (Bab 5.4), Hook 3 Saat (Bab 6.2) & Siri Mingguan (Bab 8.2).</p>
+        </div>
+        <div class="part-banner-num">03</div>
+      </div>
+
+      <div class="instructor-note-box">
+        <strong>👨‍🏫 Panduan Tugasan Pelajar (Kempen 7 Hari):</strong>
+        Minta setiap pelajar memilih niche produk mereka di panel kiri, klik <strong>"Jana / Tukar Variasi Ayat 7 Hari"</strong>, kemudian bentangkan skrip Hari Isnin hingga Ahad menggunakan Pratonton Telefon TikTok!
+      </div>
+
+      <div class="promo-generator-grid">
+        <!-- Left Controls + Phone Preview -->
+        <aside class="promo-controls-card">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.1rem;">
+            <div class="subtopic-orb">7D</div>
+            <div>
+              <h3 style="font-size:1.05rem;font-weight:900;color:var(--blue-900);">Tetapan Kempen 7 Hari</h3>
+              <p style="font-size:0.75rem;color:var(--text-secondary);">Pilih produk atau masukkan info bisnes anda</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="promoNicheSelect">1. Pilih Kategori Niche / Bidang</label>
+            <select id="promoNicheSelect" class="form-select" onchange="applyNichePreset()">
+              <option value="makanan">🍱 Makanan & Minuman (Beriani / Sambal / Kuih)</option>
+              <option value="kecantikan">✨ Kecantikan & Skincare (Sabun Organik / Kosmetik)</option>
+              <option value="fesyen">🧕 Fesyen, Pakaian & Tudung (Bawal / Bundle)</option>
+              <option value="digital">📘 Produk Digital / Pendidikan / Kelas Online / eBook</option>
+              <option value="gajet">🎙️ Gajet, Elektronik & Peralatan Creator</option>
+              <option value="kesihatan">🌿 Kesihatan, Suplemen & Kecergasan (Fitness / Herba)</option>
+              <option value="kediaman">🏠 Kelengkapan Rumah, Dapur & Dekorasi</option>
+              <option value="automotif">🚗 Automotif, Penjagaan Kereta & Aksesori Motor</option>
+              <option value="servis">🛠️ Perkhidmatan & Kemahiran TVET (Aircond / Baiki / Salon)</option>
+              <option value="hartanah">🏢 Hartanah, Takaful & Perancangan Kewangan</option>
+              <option value="pelancongan">✈️ Pelancongan, Homestay & Pakej Percutian</option>
+              <option value="pertanian">🌱 Pertanian, Tanaman & Haiwan Peliharaan (Pet Shop)</option>
+              <option value="kraf">🎨 Kraftangan, Hadiah Custom & Percetakan (Doorgift)</option>
+              <option value="lainlain">➕ Lain-Lain Bidang (Masukkan Bidang / Niche Sendiri)</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="customNicheGroup" style="display:none;background:var(--blue-50);padding:0.75rem;border-radius:8px;border:1px dashed var(--blue-500);">
+            <label for="promoCustomNiche">1(b). Nyatakan Bidang / Niche Pilihan Anda</label>
+            <input type="text" id="promoCustomNiche" class="form-input" placeholder="Cth: Bakeri Pastri / Kimpalan / Kedai Gunting Rambut / Fotografi" oninput="generateSevenDaysPromo(false)" style="margin-bottom:0.5rem;background:#fff;" />
+            <label for="promoCustomHashtags">Hashtag Niche Anda (3–5 Hashtag)</label>
+            <input type="text" id="promoCustomHashtags" class="form-input" value="#usahawanmalaysia #tiktokbisnes #produkviral #sokonglokal #fypmalaysia" oninput="generateSevenDaysPromo(false)" style="background:#fff;" />
+          </div>
+
+          <div class="form-group">
+            <label for="promoProductName">2. Nama Produk / Servis Anda</label>
+            <input type="text" id="promoProductName" class="form-input" value="Nasi Beriani Gam & Sambal Warisan" oninput="generateSevenDaysPromo(false)" />
+          </div>
+
+          <div class="form-group">
+            <label for="promoProblem">3. Masalah Utama Pelanggan (M - Masalah)</label>
+            <textarea id="promoProblem" class="form-textarea" rows="2" oninput="generateSevenDaysPromo(false)">susah nak cari makan tengah hari yang sedap, portion banyak dan rasa asli macam kenduri</textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="promoBenefit">4. Kelebihan & Bukti Sosial (A - Ajar/Aksi)</label>
+            <textarea id="promoBenefit" class="form-textarea" rows="2" oninput="generateSevenDaysPromo(false)">rempah asli turun-temurun, daging lembut cair di mulut dan lebih 500 pek terjual setiap minggu</textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="promoOffer">5. Tawaran Promosi & CTA (S - Seru)</label>
+            <input type="text" id="promoOffer" class="form-input" value="Promosi Pek Kombo RM19.90 + Percuma Acar Buah Hari Ini Sahaja" oninput="generateSevenDaysPromo(false)" />
+          </div>
+
+          <div class="form-group">
+            <label for="promoToneSelect">6. Gaya Penyampaian (Tone)</label>
+            <select id="promoToneSelect" class="form-select" onchange="generateSevenDaysPromo(true)">
+              <option value="emas">🎯 Formula E.M.A.S Seimbang (Disarankan eBook)</option>
+              <option value="edumarket">💡 Gaya Edu-Market (Didik Sambil Menjual - Bab 2.4)</option>
+              <option value="soft">😊 Gaya Soft Close (Santai Tanpa Paksaan - Bab 7.8)</option>
+              <option value="urgent">⚡ Gaya Flash Sale & Urgency (Bab 7.3)</option>
+            </select>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:0.55rem;margin-top:1.1rem;">
+            <button class="btn-primary-blue" style="width:100%;justify-content:center;" onclick="regeneratePromoVariations()">
+              🔄 Tukar Variasi Ayat Trending (7 Hari)
+            </button>
+            <button class="btn-outline-blue" style="width:100%;justify-content:center;" onclick="copyAllSevenDays()">
+              📋 Salin Semua Skrip 7 Hari Penuh
+            </button>
+          </div>
+
+          <!-- Live TikTok Smartphone Screen Preview -->
+          <div style="margin-top:1.5rem;">
+            <div style="font-size:0.75rem;font-weight:900;text-transform:uppercase;letter-spacing:0.08em;color:var(--blue-900);margin-bottom:0.5rem;">
+              📱 Pratonton Skrin TikTok (FYP Preview)
+            </div>
+            <div id="tiktokPhoneMockup" class="phone-preview-mockup"></div>
+          </div>
+        </aside>
+
+        <!-- Right 7-Day Generated Cards -->
+        <div>
+          <div class="day-filter-pills">
+            <button class="day-pill-btn active" data-day="all" onclick="filterPromoDay('all')">Semua 7 Hari (Isnin – Ahad)</button>
+            <button class="day-pill-btn" data-day="0" onclick="filterPromoDay('0')">01 Isnin</button>
+            <button class="day-pill-btn" data-day="1" onclick="filterPromoDay('1')">02 Selasa</button>
+            <button class="day-pill-btn" data-day="2" onclick="filterPromoDay('2')">03 Rabu</button>
+            <button class="day-pill-btn" data-day="3" onclick="filterPromoDay('3')">04 Khamis</button>
+            <button class="day-pill-btn" data-day="4" onclick="filterPromoDay('4')">05 Jumaat</button>
+            <button class="day-pill-btn" data-day="5" onclick="filterPromoDay('5')">06 Sabtu</button>
+            <button class="day-pill-btn" data-day="6" onclick="filterPromoDay('6')">07 Ahad</button>
+          </div>
+
+          <div id="daysCardsGrid" class="days-cards-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 04: MAKMAL SIMULATOR FYP, KALKULATOR PENDAPATAN & KUIZ
+         ====================================================================== -->
+    <section id="view-makmal" class="view-section">
+      <div class="part-banner">
+        <div class="part-banner-left">
+          <span class="part-tag">INTERACTIVE LAB & ASSESSMENT • MODULE 04</span>
+          <h2>Simulator Algoritma FYP, Kalkulator Pendapatan & Kuiz</h2>
+          <p>Uji potensi video anda menembusi FYP, semak risiko Shadowban (Bab 7.7), kira anggaran pendapatan bulanan (Bab 4), dan jawab 15 soalan kuiz interaktif.</p>
+        </div>
+        <div class="part-banner-num">04</div>
+      </div>
+
+      <div class="lab-grid">
+        <!-- Simulator 1: FYP & Anti-Shadowban Checker -->
+        <div class="lab-card">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <div class="subtopic-orb">FYP</div>
+            <div>
+              <h3 style="font-size:1.1rem;font-weight:900;color:var(--blue-900);">Simulator Skor FYP & Audit Shadowban</h3>
+              <p style="font-size:0.78rem;color:var(--text-secondary);">Berasaskan 4 Pilar Algoritma (Bab 6.1) & 7 Larangan (Bab 7.7)</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="simDuration">Durasi Video (Saat) — Ideal: 15–30 saat</label>
+            <input type="range" id="simDuration" min="5" max="90" value="20" style="width:100%;" oninput="document.getElementById('simDurLabel').textContent=this.value+' saat';runFypSimulation();" />
+            <div style="font-size:0.8rem;font-weight:800;color:var(--blue-700);" id="simDurLabel">20 saat</div>
+          </div>
+
+          <div style="display:flex;gap:1.2rem;flex-wrap:wrap;margin-bottom:1rem;">
+            <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.85rem;font-weight:700;cursor:pointer;">
+              <input type="checkbox" id="simHasHook" checked onchange="runFypSimulation()" />
+              Ada Hook 3 Saat Pertama + Teks Atas Skrin
+            </label>
+            <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.85rem;font-weight:700;cursor:pointer;">
+              <input type="checkbox" id="simTrendingAudio" checked onchange="runFypSimulation()" />
+              Guna Lagu Trending TikTok (Volume Rendah)
+            </label>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;">
+            <div class="form-group">
+              <label for="simHashtagCount">Bilangan Hashtag (Ideal: 3–5)</label>
+              <input type="number" id="simHashtagCount" class="form-input" value="4" min="0" max="30" oninput="runFypSimulation()" />
+            </div>
+            <div class="form-group">
+              <label for="simViolation">Semakan Pantang Larang (Bab 7.7)</label>
+              <select id="simViolation" class="form-select" onchange="runFypSimulation()">
+                <option value="none">✅ Tiada Pelanggaran (Patuh Polisi)</option>
+                <option value="Muzik Luar Tanpa Hak Cipta">❌ Guna Muzik Luar Tanpa Lesen</option>
+                <option value="Spam Ayat Jualan Berlebihan">❌ Spam Hard-Selling Berulang Kali</option>
+                <option value="Overclaim / Testimoni Palsu">❌ Janji Palsu / Overclaim Melampau</option>
+                <option value="Bahasa Kasar / Isu Sensitif">❌ Bahasa Kesat / Politik / Sensitif</option>
+                <option value="Clickbait Menipu">❌ Clickbait Menipu Penonton</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 3 Corporate Metric Pillars (Matches Slide 06 Template Percentage Cards) -->
+          <div class="metric-pillars">
+            <div class="metric-pillar-card">
+              <div class="metric-pillar-orb" id="pillarWatchTime">92%</div>
+              <strong style="font-size:0.82rem;display:block;">Watch Time</strong>
+              <small style="font-size:0.7rem;color:var(--blue-100);">Completion Rate</small>
+            </div>
+            <div class="metric-pillar-card">
+              <div class="metric-pillar-orb" id="pillarEngagement">96%</div>
+              <strong style="font-size:0.82rem;display:block;">Engagement</strong>
+              <small style="font-size:0.7rem;color:var(--blue-100);">Hook & Audio</small>
+            </div>
+            <div class="metric-pillar-card">
+              <div class="metric-pillar-orb" id="pillarFypScore">98%</div>
+              <strong style="font-size:0.82rem;display:block;">Potensi FYP</strong>
+              <small style="font-size:0.7rem;color:var(--blue-100);">Skor Keseluruhan</small>
+            </div>
+          </div>
+
+          <div id="fypSimStatusOutput"></div>
+        </div>
+
+        <!-- Simulator 2: Kalkulator Potensi Pendapatan TikTok (Bab 4) -->
+        <div class="lab-card">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <div class="subtopic-orb">RM</div>
+            <div>
+              <h3 style="font-size:1.1rem;font-weight:900;color:var(--blue-900);">Kalkulator Potensi Pendapatan TikTok</h3>
+              <p style="font-size:0.78rem;color:var(--text-secondary);">Simulasi Jualan Sendiri, Affiliate (10%–30%) & Sponsored (Bab 4)</p>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;">
+            <div class="form-group">
+              <label for="calcDailyViews">Purata Tontonan (Views) Sehari</label>
+              <input type="number" id="calcDailyViews" class="form-input" value="5000" step="500" oninput="runIncomeCalculator()" />
+            </div>
+            <div class="form-group">
+              <label for="calcConvRate">Kadar Conversion Pembeli (%)</label>
+              <input type="number" id="calcConvRate" class="form-input" value="1.5" step="0.1" oninput="runIncomeCalculator()" />
+            </div>
+            <div class="form-group">
+              <label for="calcProductPrice">Harga Produk (RM)</label>
+              <input type="number" id="calcProductPrice" class="form-input" value="35" step="1" oninput="runIncomeCalculator()" />
+            </div>
+            <div class="form-group">
+              <label for="calcCommission">Komisen Affiliate (%) — Bab 4.3</label>
+              <input type="number" id="calcCommission" class="form-input" value="20" min="5" max="50" oninput="runIncomeCalculator()" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="calcFollowers">Jumlah Pengikut (Followers) Semasa — Bab 4.5</label>
+            <input type="number" id="calcFollowers" class="form-input" value="12000" step="1000" oninput="runIncomeCalculator()" />
+          </div>
+
+          <div id="incomeCalcResult"></div>
+        </div>
+      </div>
+
+      <!-- 15-Question Interactive Quiz -->
+      <div class="quiz-container-card">
+        <div style="display:flex;align-items:center;gap:0.85rem;margin-bottom:1.2rem;">
+          <div class="subtopic-orb">KUIZ</div>
+          <div>
+            <h3 style="font-size:1.25rem;font-weight:900;color:var(--blue-900);">Uji Minda TikTokPreneur (15 Soalan Bab 1 – Bab 8)</h3>
+            <p style="font-size:0.84rem;color:var(--text-secondary);">Jawab soalan interaktif di bawah untuk menguji kefahaman anda terhadap keseluruhan kandungan eBook.</p>
+          </div>
+        </div>
+
+        <div id="quizInteractiveBox"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 05: CHATBOT PINTAR AI "CIKGU TIKTOK BOT"
+         ====================================================================== -->
+    <section id="view-chatbot" class="view-section">
+      <div class="part-banner">
+        <div class="part-banner-left">
+          <span class="part-tag">AI LEARNING ASSISTANT • MODULE 05</span>
+          <h2>Chatbot Interaktif "Cikgu TikTok Bot"</h2>
+          <p>Pembantu maya pintar yang dilatih khusus menggunakan nota eBook "TikTok: Kaedah Pemasaran Bisnes" untuk menjawab soalan pelajar & membina idea skrip secara langsung.</p>
+        </div>
+        <div class="part-banner-num">05</div>
+      </div>
+
+      <div class="chatbot-full-layout">
+        <!-- Quick Prompts Sidebar -->
+        <aside class="chapters-sidebar">
+          <h3 style="font-size:0.95rem;font-weight:900;color:var(--blue-900);margin-bottom:0.5rem;">
+            💬 Soalan Popular Pelajar
+          </h3>
+          <p style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:0.9rem;">
+            Klik mana-mana topik di bawah untuk bertanya terus kepada Cikgu TikTok Bot:
+          </p>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Terangkan maksud Formula E.M.A.S beserta contoh skrip')">
+              💎 Apakah maksud Formula E.M.A.S?
+            </button>
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Macam mana nak buat konten kalau saya malu menari?')">
+              🙌 Cara buat konten "Tak Menari" bagi pemalu?
+            </button>
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Apakah 4 pilar utama algoritma FYP TikTok?')">
+              🚀 Bagaimana algoritma FYP TikTok berfungsi?
+            </button>
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Bilakah waktu posting terbaik di Malaysia?')">
+              ⏰ Waktu terbaik post video di Malaysia?
+            </button>
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Bagaimana cara jana komisen TikTok Affiliate tanpa modal?')">
+              💵 Cara mula TikTok Affiliate tanpa simpan stok?
+            </button>
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Senaraikan 7 pantang larang yang menyebabkan Shadowban')">
+              ⚠️ 7 Pantang larang elak terkena Shadowban?
+            </button>
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Bagaimana teknik close sale semasa Live dan Soft Close?')">
+              💰 Teknik Close Sale Live & Seni Soft Close?
+            </button>
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Terangkan Pelan Perancangan 90 Hari (3 Bulan Pertama)')">
+              🗓️ Pelan Tindakan 90 Hari (Bulan 1 – Bulan 3)?
+            </button>
+            <button class="quick-prompt-chip" onclick="askChatbotQuick('Berikan 5 contoh ayat hook promosi trending 3 saat pertama')">
+              🔥 5 Contoh ayat Hook Promosi Trending?
+            </button>
+          </div>
+        </aside>
+
+        <!-- Chat Window -->
+        <div class="chat-window-card">
+          <div class="chat-header">
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <div class="chap-orb">🤖</div>
+              <div>
+                <strong style="font-size:1rem;display:block;">Cikgu TikTok Bot (Pembantu PdP eBook)</strong>
+                <span style="font-size:0.75rem;color:var(--blue-100);">Aktif • Rujukan Penuh Bab 1 hingga Bab 8</span>
+              </div>
+            </div>
+            <button class="btn-outline-blue" style="padding:0.35rem 0.85rem;font-size:0.75rem;" onclick="switchView('promosi')">
+              ⚡ Buka Penjana 7 Hari
+            </button>
+          </div>
+
+          <div id="chatMessagesContainer" class="chat-messages">
+            <div class="chat-bubble bot">
+              <strong>Assalamualaikum & Salam Sejahtera! 👋 Saya Cikgu TikTok Bot.</strong><br/>
+              Saya sedia membantu para pensyarah dan pelajar memahami keseluruhan modul <em>"TikTok: Kaedah Pemasaran Bisnes (Tapi Tak Menari)"</em> tulisan <strong>En. Mohd Azrulnizam (PMTG) & En. Razlan</strong>.<br/><br/>
+              Anda boleh tanya saya tentang:<br/>
+              • <strong>Formula E.M.A.S</strong> (Engage, Masalah, Ajar/Aksi, Seru)<br/>
+              • <strong>Cara naikkan View & FYP</strong> (4 Pilar Algoritma & Waktu Puncak Malaysia)<br/>
+              • <strong>7 Cara Jana Pendapatan</strong> (TikTok Shop, Affiliate 10%–30%, Live Gifts, Sponsored)<br/>
+              • <strong>7 Pantang Larang Shadowban</strong> & Teknik <strong>Soft Close</strong><br/>
+              • Atau klik mana-mana butang soalan pantas di sebelah kiri!
+            </div>
+          </div>
+
+          <form class="chat-input-bar" onsubmit="handleChatSubmit(event)">
+            <input
+              type="text"
+              id="chatInputField"
+              class="form-input"
+              placeholder="Taip soalan anda di sini (cth: Apa itu Formula EMAS? Bagaimana elak shadowban?)..."
+              autocomplete="off"
+            />
+            <button type="submit" class="btn-primary-blue" style="flex-shrink:0;">
+              Hantar ➤
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Quick Chatbot Button -->
+  <button class="floating-chat-launcher" onclick="switchView('chatbot')" title="Tanya Cikgu TikTok Bot">
+    <span>🤖</span> Tanya Cikgu TikTok Bot
+  </button>
+
+  <!-- Toast Feedback Notification -->
+  <div id="toastMsg" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
