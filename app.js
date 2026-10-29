@@ -830,17 +830,17 @@
     if (!d) return;
 
     phoneEl.innerHTML = `
-      <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:#94a3b8;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:0.5rem;">
-        <span>Following | <strong style="color:#fff;border-bottom:2px solid #fff;padding-bottom:2px;">For You (FYP)</strong></span>
-        <span style="background:var(--blue-700);color:#fff;padding:2px 8px;border-radius:99px;font-weight:800;">${d.dayName}</span>
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:#e4e4e7;border-bottom:1px solid rgba(255,255,255,0.22);padding-bottom:0.5rem;">
+        <span>Following | <strong style="color:#ffffff;border-bottom:2px solid #ffffff;padding-bottom:2px;">For You (FYP)</strong></span>
+        <span style="background:#ffffff;color:#000000;padding:2px 8px;border-radius:99px;font-weight:900;">${d.dayName}</span>
       </div>
 
       <div class="phone-onscreen-hook">
         ${d.hook}
       </div>
 
-      <div style="margin:1rem 0;background:rgba(255,255,255,0.08);border-radius:12px;padding:0.8rem;font-size:0.78rem;line-height:1.45;color:#e2e8f0;">
-        <div style="font-weight:800;color:#60a5fa;margin-bottom:4px;">🎙️ Dialog Suara (15–30s):</div>
+      <div style="margin:1rem 0;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:0.8rem;font-size:0.78rem;line-height:1.45;color:#ffffff;">
+        <div style="font-weight:900;color:#fbbf24;margin-bottom:4px;">🎙️ Dialog Suara (15–30s):</div>
         "${d.emas.e} ${d.emas.a} ${d.emas.s}"
       </div>
 
@@ -848,14 +848,14 @@
         <div class="yellow-bag-pill">
           🛒 Beg Kuning: ${d.product} (${d.offer})
         </div>
-        <div style="font-weight:800;font-size:0.84rem;margin-bottom:2px;">@usahawantiktok.my ✓</div>
-        <div style="font-size:0.75rem;color:#cbd5e1;line-height:1.35;margin-bottom:4px;">
+        <div style="font-weight:900;font-size:0.84rem;color:#ffffff;margin-bottom:2px;">@usahawantiktok.my ✓</div>
+        <div style="font-size:0.75rem;color:#f4f4f5;line-height:1.35;margin-bottom:4px;">
           ${d.caption}
         </div>
-        <div style="font-size:0.72rem;color:#93c5fd;font-weight:700;">
+        <div style="font-size:0.72rem;color:#fbbf24;font-weight:800;">
           ${d.hashtags.join(" ")}
         </div>
-        <div style="font-size:0.7rem;color:#f8fafc;margin-top:6px;display:flex;align-items:center;gap:6px;">
+        <div style="font-size:0.7rem;color:#ffffff;margin-top:6px;display:flex;align-items:center;gap:6px;">
           <span>🎵 ${d.audioTip}</span>
         </div>
       </div>
